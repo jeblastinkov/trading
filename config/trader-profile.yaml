@@ -1,0 +1,46 @@
+# Trader Profile Configuration
+# Edit these values to match your personal trading setup
+
+broker:
+  name: AMP Futures
+  platform: CQG  # or TradingView, MT5, Sierra Chart, NinjaTrader
+  commission_per_side: 0.42  # USD (Exchange $0.25 + CQG $0.10 + NFA $0.02 + AMP $0.05)
+  commission_round_trip: 0.84
+
+account:
+  size: 1100  # USD
+  currency: USD
+
+trader:
+  timezone: Europe/Berlin  # CET/CEST
+  sessions:
+    - london_am    # 09:00-15:30 CET
+    - ny_pm        # 15:30-22:00 CET
+
+contract:
+  symbol: MES
+  exchange: CME
+  multiplier: 5       # $5 per index point
+  tick_size: 0.25      # index points
+  tick_value: 1.25     # USD per tick
+  point_value: 5.00    # USD per point (4 ticks)
+  day_trade_margin: 50
+  overnight_margin: 2455
+
+risk:
+  max_contracts: 1
+  risk_per_trade_pct: 2.0          # percent of account
+  risk_per_trade_dollars: 22       # $1,100 × 2%
+  max_stop_points: 5               # 5 points = $25 max risk
+  default_stop_points: 4           # 4 points = $20 default
+  min_reward_risk_ratio: 1.5       # minimum 1.5:1 R:R
+  max_daily_loss: 55               # $55 = 5% of account
+  max_daily_trades: 4
+  max_weekly_loss: 150             # ~14% of account
+  allow_overnight: false           # margin ($2,455) > account ($1,100)
+  consecutive_loss_pause: 2        # pause after 2 consecutive losses
+  pause_duration_minutes: 30
+
+scaling:
+  add_contract_per: 1000           # add 1 contract per $1,000 net profit
+  base_from: 1100                  # above starting balance
