@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -n '{\"systemMessage\": \"Good morning! Run /morning-briefing for todays executive plan.\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
