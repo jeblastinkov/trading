@@ -37,110 +37,115 @@ Read these files for reference:
 Output a concise executive plan in this exact format. Be specific with prices. No filler — every line must be actionable.
 
 ```markdown
-# Battle Plan — [Date] ([Day of Week])
+# 📋 Battle Plan — [Day of Week], [Date]
 
 ---
 
-## ⚠️ [DST ALERT if applicable — e.g. "DST GAP ACTIVE: US on EDT, EU still on CET"]
+## ⚠️ DST GAP ACTIVE — [reason, e.g. "EU not yet on CEST (switches Sunday Mar 29)"]
 
-| Event | Time (CET today) |
-|-------|-----------------|
-| Economic data (8:30 AM EDT) | ___ CET |
-| US cash open | ___ CET |
-| US cash close | ___ CET |
+| Event                         | Normal CET | **Today**     |
+|------------------------------|------------|---------------|
+| Economic data (8:30 AM EDT)  | 14:30 CET  | **___ CET**   |
+| US cash open                 | 15:30 CET  | **___ CET**   |
+| US cash close                | 22:00 CET  | **___ CET**   |
 
 [Omit this section entirely if no DST gap is active]
 
 ---
 
-## Market Snapshot
+## 📊 Market Snapshot
 
-| | |
-|--|--|
-| **ES pre-market** | ~___ ([+/-]% overnight) |
-| **PDC (ES)** | ___ |
-| **Gap** | +/-___ pts from PDC / No gap |
-| **200-DMA** | ~___ |
-| **VIX** | ___ |
-| **Key macro** | [Oil price / key rate / dominant theme in 5 words] |
+| Metric            | Value                              |
+|-------------------|------------------------------------|
+| **ES pre-market** | ~___ *([+/-]% overnight)*          |
+| **PDC (ES)**      | ___                                |
+| **Gap**           | +/-___ pts from PDC / No gap       |
+| **200-DMA**       | ~___                               |
+| **VIX**           | ___ *([rising/declining])*         |
+| **[Key macro]**   | [Oil / key rate / dominant theme]  |
 
 **Context:** [2–3 sentences max. What happened yesterday, what's driving overnight, what's the key risk today.]
 
 ---
 
-## Bias: [BULLISH / BEARISH / NEUTRAL] — Confidence: [High / Medium / Low]
+## 🧭 Bias — [BULLISH / BEARISH / NEUTRAL] &nbsp;|&nbsp; Confidence: [High / Medium / Low]
 
-**Why [direction]:** [2 bullet points max]
-**Why cautious:** [1–2 bullet points on what could flip it, if any]
+**[Bullish/Bearish] because:**
+- [Reason 1]
+- [Reason 2]
 
-| Scenario | Level | Action |
-|----------|-------|--------|
-| Thesis holds | Above/below ___ | [Long / Short / Hold] |
-| Thesis weakens | Above/below ___ | [Neutral / Reduce] |
-| Thesis off | Above/below ___ | [Flip / Sit out] |
+**Cautious because:**
+- [What could flip it]
 
----
-
-## Key Levels
-
-| Level | Price | Role |
-|-------|-------|------|
-| [Label] | ___ | Resistance / upside target |
-| **PDH** | ___ | Ceiling |
-| **[Key pivot]** | ___ | Must hold for [bulls/bears] |
-| **[Key MA or VWAP]** | ~___ | Line in the sand |
-| PDC | ___ | Bias pivot |
-| **PDL** | ___ | Floor |
+| Condition               | Level         | Response                   |
+|------------------------|---------------|----------------------------|
+| Thesis **holds**       | Above/below ___ | [Long / Short / Hold]    |
+| Thesis **weakens**     | Above/below ___ | [Neutral / Reduce]       |
+| Thesis **invalidated** | Above/below ___ | [Flip / Sit out]         |
 
 ---
 
-## Economic Events
+## 📍 Key Levels
 
-| Time (CET) | Event | Action |
-|------------|-------|--------|
-| **[time]** | ⛔ [Event name] | **No trades — [reason]** |
-| [time] | [Event] | [Trade normally / Avoid 5 min after] |
-
----
-
-## London AM — [start] to [end] CET (max 2 trades)
-
-**[time] — [What to read at the open in one sentence.]**
-
-| Scenario | Trade |
-|----------|-------|
-| [Bullish condition, e.g. "Price holds above ___"] | [Entry, stop, target] |
-| [Neutral condition, e.g. "Price fades to ___"] | [Entry, stop, target or "wait"] |
-| [Bearish condition, e.g. "Price breaks below ___"] | [Action or "no trade"] |
-
-⛔ **[time]: [no-trade note if applicable]**
+| Level             | Price  | Role                                    |
+|-------------------|--------|-----------------------------------------|
+| [ONH / label]     | ___    | Resistance / upside target              |
+| **PDH**           | ___    | Ceiling — break = [bull/bear] signal    |
+| **[Key pivot]**   | ___    | Must hold for [bulls/bears]             |
+| **[200-DMA/VWAP]**| ~___   | Line in the sand                        |
+| PDC               | ___    | Bias pivot                              |
+| **PDL**           | ___    | Floor — break = [implication]           |
 
 ---
 
-## NY PM — [start] to [end] CET (max 2 trades)
+## 📅 Economic Events (CET — DST adjusted if applicable)
 
-**[time] — [What to watch at the open in one sentence.]**
-
-| Scenario | Trade |
-|----------|-------|
-| [Bullish IB condition] | [Entry, stop, target] |
-| [Bearish IB condition] | [Entry, stop, target] |
-| **[Midday window, e.g. "15:00–18:00 (US lunch)"]** | [Sit out / selective] |
-| **[Afternoon window]** | [Closing flow approach] |
-
-⛔ **No new trades after [time]. Flat before [close time].**
+| Time (CET)      | Event                  | Action                                  |
+|-----------------|------------------------|-----------------------------------------|
+| **[time]**      | ⛔ [Event name]        | **Hands off — [reason]**               |
+| [time]          | [Event]                | Avoid 5 min after / Trade normally      |
+| All day         | [Headline risk if any] | [What to do]                            |
 
 ---
 
-## Risk
+## 🇬🇧 London AM &nbsp;—&nbsp; [start] to [end] CET &nbsp;|&nbsp; Max 2 trades
 
-| | |
-|--|--|
-| Max daily loss | **$55** — hard stop, day is done |
-| Stop | 4 pts ($20) default |
-| Target | 6–8 pts ($30–40) |
-| Min R:R | 1.5:1 |
-| Size | 1 MES only |
+> **[time] — [What to read at the open in one sentence.]**
+
+| Scenario                          | Entry                      | Stop   | Target  |
+|----------------------------------|----------------------------|--------|---------|
+| Price **[bullish condition]**    | [Entry description]        | ___    | ___     |
+| Price **[neutral condition]**    | [Entry or "wait"]          | ___    | ___     |
+| Price **[bearish condition]**    | No trade — [action]        | —      | —       |
+
+> ⛔ **[time] — [no-trade note if applicable]**
+
+---
+
+## 🇺🇸 NY PM &nbsp;—&nbsp; [start] to [end] CET &nbsp;|&nbsp; Max 2 trades
+
+> **[time] — [What to watch at the open in one sentence.]**
+
+| Scenario                              | Entry                   | Stop   | Target           |
+|--------------------------------------|-------------------------|--------|------------------|
+| IB **[bullish condition]**           | [Entry description]     | ___    | ___              |
+| IB **[bearish condition]**           | [Entry description]     | ___    | ___              |
+| **[Midday window] *(US lunch)***     | Sit out unless clean trend | —   | —                |
+| **[Afternoon window] *(closing)***   | [Closing flow approach] | Trail  | Prior swing      |
+
+> ⛔ **No new trades after [time]. Flat before [close time].**
+
+---
+
+## 💰 Risk Parameters
+
+| Parameter          | Value                              |
+|-------------------|------------------------------------|
+| **Max daily loss** | **$55** — hard stop, day is over  |
+| **Default stop**   | 4 pts = $20                       |
+| **Default target** | 6–8 pts = $30–40                  |
+| **Min R:R**        | 1.5 : 1                           |
+| **Size**           | 1 MES contract only               |
 
 ---
 
