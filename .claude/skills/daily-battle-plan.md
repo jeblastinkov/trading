@@ -33,103 +33,118 @@ Read these files for reference:
 - `config/trader-profile.yaml` — account details
 
 ### Step 3: Generate the Battle Plan
-Output the plan in this exact format:
+
+Output a concise executive plan in this exact format. Be specific with prices. No filler — every line must be actionable.
 
 ```markdown
-# Daily Battle Plan — [Date] ([Day of Week])
+# Battle Plan — [Date] ([Day of Week])
 
-## Market Context
-- **Prior Day**: Close ___ | High ___ | Low ___ | Range ___ pts | Type: Trend/Range/Chop
-- **Overnight**: High ___ | Low ___ | Range ___ pts | Direction: Up/Down/Flat
-- **Current Price**: ~___ (as of ___ CET)
-- **Gap**: +/-___ pts from PDC / No gap
-- **Broader Context**: [1-2 sentences on weekly/trend context]
+---
 
-## Daily Bias: [LONG / SHORT / NEUTRAL]
-**Reasoning**: [2-3 bullet points explaining the bias]
-**Confidence**: High / Medium / Low
-**Invalidation**: [What would flip your bias — specific price level or event]
+## ⚠️ [DST ALERT if applicable — e.g. "DST GAP ACTIVE: US on EDT, EU still on CET"]
+
+| Event | Time (CET today) |
+|-------|-----------------|
+| Economic data (8:30 AM EDT) | ___ CET |
+| US cash open | ___ CET |
+| US cash close | ___ CET |
+
+[Omit this section entirely if no DST gap is active]
+
+---
+
+## Market Snapshot
+
+| | |
+|--|--|
+| **ES pre-market** | ~___ ([+/-]% overnight) |
+| **PDC (ES)** | ___ |
+| **Gap** | +/-___ pts from PDC / No gap |
+| **200-DMA** | ~___ |
+| **VIX** | ___ |
+| **Key macro** | [Oil price / key rate / dominant theme in 5 words] |
+
+**Context:** [2–3 sentences max. What happened yesterday, what's driving overnight, what's the key risk today.]
+
+---
+
+## Bias: [BULLISH / BEARISH / NEUTRAL] — Confidence: [High / Medium / Low]
+
+**Why [direction]:** [2 bullet points max]
+**Why cautious:** [1–2 bullet points on what could flip it, if any]
+
+| Scenario | Level | Action |
+|----------|-------|--------|
+| Thesis holds | Above/below ___ | [Long / Short / Hold] |
+| Thesis weakens | Above/below ___ | [Neutral / Reduce] |
+| Thesis off | Above/below ___ | [Flip / Sit out] |
+
+---
 
 ## Key Levels
 
-| Level | Price | Significance |
-|-------|-------|-------------|
-| **Weekly High** | ___ | Major resistance |
-| **PDH** | ___ | Prior day resistance |
-| **ONH** | ___ | Overnight resistance |
-| **VWAP (est.)** | ~___ | Mean reference |
-| **PDC** | ___ | Pivot — above = bullish, below = bearish |
-| **ONL** | ___ | Overnight support |
-| **PDL** | ___ | Prior day support |
-| **Weekly Low** | ___ | Major support |
-| **Round #** | ___ | Psychological level |
-
-## Economic Calendar (CET)
-
-| Time (CET) | Event | Impact | Action |
-|------------|-------|--------|--------|
-| ___ | ___ | High/Medium/Low | Trade normally / Avoid 5 min / No new trades until after |
-
-## No-Trade Zones
-- [List specific times to NOT trade, e.g., "14:25-14:40 CET (CPI release at 14:30)"]
-- [Any FOMC, NFP, or other major event windows]
-
-## London AM Plan (09:00-15:30 CET)
-
-### Opening (09:00-09:30)
-- **Watch for**: [specific setup based on overnight context]
-- **Strategy**: [ORB / Level Reaction / Wait]
-- **Key level to watch**: ___
-
-### Mid-Morning (09:30-14:00)
-- **If trending from open**: [what to do]
-- **If ranging**: [what to do]
-- **Key level to watch**: ___
-
-### Pre-US (14:00-15:30)
-- **Economic data at**: [time if any]
-- **Approach**: [specific guidance]
-
-**London AM max trades**: 2
-
-## NY PM Plan (15:30-22:00 CET)
-
-### US Open (15:30-16:30)
-- **Opening range**: Watch 15:30-16:00 for IB formation
-- **Strategy**: [ORB / Level Reaction]
-- **Key level to watch**: ___
-
-### Midday (16:30-19:00)
-- **Approach**: [likely reduced activity / specific scenario where trading is okay]
-
-### Afternoon (19:00-21:30)
-- **Watch for**: [trend completion / reversal / level test]
-- **Exit all by**: 21:30 CET
-
-**NY PM max trades**: 2
-
-## If/Then Scenarios
-
-| If... | Then... |
-|-------|---------|
-| Price breaks above ___ | Look for long continuation toward ___ |
-| Price breaks below ___ | Look for short continuation toward ___ |
-| Price rejects at ___ | Fade with stop at ___, target ___ |
-| [Economic event] surprises | Wait 5 min, then trade in direction of the move |
-| Chop day develops | Reduce to 1-2 trades max, or sit out entirely |
-
-## Risk Budget
-- **Max trades today**: 4 (2 London + 2 NY)
-- **Max loss today**: $55
-- **Default stop**: 4 points ($20)
-- **Default target**: 6-8 points ($30-40)
-- **Contracts**: 1 MES only
-
-## Mindset Reminder
-[One relevant psychology note from knowledge/psychology.md based on the day's conditions. E.g., if it's an FOMC day: "Be patient. Don't trade the announcement spike. Wait for the dust to settle."]
+| Level | Price | Role |
+|-------|-------|------|
+| [Label] | ___ | Resistance / upside target |
+| **PDH** | ___ | Ceiling |
+| **[Key pivot]** | ___ | Must hold for [bulls/bears] |
+| **[Key MA or VWAP]** | ~___ | Line in the sand |
+| PDC | ___ | Bias pivot |
+| **PDL** | ___ | Floor |
 
 ---
-*This plan is for educational purposes. Trading futures involves substantial risk of loss. Adapt as the market reveals new information.*
+
+## Economic Events
+
+| Time (CET) | Event | Action |
+|------------|-------|--------|
+| **[time]** | ⛔ [Event name] | **No trades — [reason]** |
+| [time] | [Event] | [Trade normally / Avoid 5 min after] |
+
+---
+
+## London AM — [start] to [end] CET (max 2 trades)
+
+**[time] — [What to read at the open in one sentence.]**
+
+| Scenario | Trade |
+|----------|-------|
+| [Bullish condition, e.g. "Price holds above ___"] | [Entry, stop, target] |
+| [Neutral condition, e.g. "Price fades to ___"] | [Entry, stop, target or "wait"] |
+| [Bearish condition, e.g. "Price breaks below ___"] | [Action or "no trade"] |
+
+⛔ **[time]: [no-trade note if applicable]**
+
+---
+
+## NY PM — [start] to [end] CET (max 2 trades)
+
+**[time] — [What to watch at the open in one sentence.]**
+
+| Scenario | Trade |
+|----------|-------|
+| [Bullish IB condition] | [Entry, stop, target] |
+| [Bearish IB condition] | [Entry, stop, target] |
+| **[Midday window, e.g. "15:00–18:00 (US lunch)"]** | [Sit out / selective] |
+| **[Afternoon window]** | [Closing flow approach] |
+
+⛔ **No new trades after [time]. Flat before [close time].**
+
+---
+
+## Risk
+
+| | |
+|--|--|
+| Max daily loss | **$55** — hard stop, day is done |
+| Stop | 4 pts ($20) default |
+| Target | 6–8 pts ($30–40) |
+| Min R:R | 1.5:1 |
+| Size | 1 MES only |
+
+---
+
+*Educational purposes only. Futures trading involves substantial risk of loss.*
 ```
 
 ### Step 4: Save the Plan
