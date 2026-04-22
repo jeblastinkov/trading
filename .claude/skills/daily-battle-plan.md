@@ -68,106 +68,63 @@ Read these files for reference:
 - `config/trader-profile.yaml` — account details
 
 ### Step 3: Generate the Battle Plan
-Output the plan in this exact format:
+Output the plan in this exact format — concise, scannable, no fluff:
 
 ```markdown
-# Daily Battle Plan — [Date] ([Day of Week])
+# Battle Plan — [Day] [Date]
 
-## Market Context
-- **Prior Day**: Close ___ | High ___ | Low ___ | Range ___ pts | Type: Trend/Range/Chop
-- **Overnight**: High ___ | Low ___ | Range ___ pts | Direction: Up/Down/Flat
-- **Current Price**: ___ ES / ~___ MES (as of ___ CET) | Volume: ___
-- **Gap**: +/-___ pts from PDC / No gap
-- **Broader Context**: [1-2 sentences on weekly/trend context. On Mondays add: COT — Leveraged Funds net [long/short] [X]K contracts ([extreme/normal/crowded])]
-
-## Daily Bias: [LONG / SHORT / NEUTRAL]
-**Reasoning**: [2-3 bullet points explaining the bias]
-**Confidence**: High / Medium / Low
-**Invalidation**: [What would flip your bias — specific price level or event]
-
-## Key Levels
-
-| Level | Price | Significance |
-|-------|-------|-------------|
-| **Weekly High** | ___ | Major resistance |
-| **PDH** | ___ | Prior day resistance |
-| **ONH** | ___ | Overnight resistance |
-| **VWAP (est.)** | ~___ | Mean reference |
-| **PDC** | ___ | Pivot — above = bullish, below = bearish |
-| **ONL** | ___ | Overnight support |
-| **PDL** | ___ | Prior day support |
-| **Weekly Low** | ___ | Major support |
-| **Round #** | ___ | Psychological level |
-
-## Economic Calendar (CET)
-
-| Time (CET) | Event | Impact | Forecast | Previous | Action |
-|------------|-------|--------|----------|----------|--------|
-| ___ | ___ | High/Medium/Low | ___ | ___ | Trade normally / Avoid 5 min / No new trades until after |
-
-[If FOMC within 7 days, add:]
-> **FOMC Watch** — Meeting [date]. Prior statement tone: [hawkish/dovish/neutral]. Key phrase to watch: "[quote]". A surprise [hike/cut/hold] or language shift would [expected market reaction].
-
-## No-Trade Zones
-- [List specific times to NOT trade, e.g., "14:25-14:40 CET (CPI release at 14:30)"]
-- [Any FOMC, NFP, or other major event windows]
-
-## London AM Plan (09:00-15:30 CET)
-
-### Opening (09:00-09:30)
-- **Watch for**: [specific setup based on overnight context]
-- **Strategy**: [ORB / Level Reaction / Wait]
-- **Key level to watch**: ___
-
-### Mid-Morning (09:30-14:00)
-- **If trending from open**: [what to do]
-- **If ranging**: [what to do]
-- **Key level to watch**: ___
-
-### Pre-US (14:00-15:30)
-- **Economic data at**: [time if any]
-- **Approach**: [specific guidance]
-
-**London AM max trades**: 2
-
-## NY PM Plan (15:30-22:00 CET)
-
-### US Open (15:30-16:30)
-- **Opening range**: Watch 15:30-16:00 for IB formation
-- **Strategy**: [ORB / Level Reaction]
-- **Key level to watch**: ___
-
-### Midday (16:30-19:00)
-- **Approach**: [likely reduced activity / specific scenario where trading is okay]
-
-### Afternoon (19:00-21:30)
-- **Watch for**: [trend completion / reversal / level test]
-- **Exit all by**: 21:30 CET
-
-**NY PM max trades**: 2
-
-## If/Then Scenarios
-
-| If... | Then... |
-|-------|---------|
-| Price breaks above ___ | Look for long continuation toward ___ |
-| Price breaks below ___ | Look for short continuation toward ___ |
-| Price rejects at ___ | Fade with stop at ___, target ___ |
-| [Economic event] surprises | Wait 5 min, then trade in direction of the move |
-| Chop day develops | Reduce to 1-2 trades max, or sit out entirely |
-
-## Risk Budget
-- **Max trades today**: 4 (2 London + 2 NY)
-- **Max loss today**: $55
-- **Default stop**: 4 points ($20)
-- **Default target**: 6-8 points ($30-40)
-- **Contracts**: 1 MES only
-
-## Mindset Reminder
-[One relevant psychology note from knowledge/psychology.md based on the day's conditions. E.g., if it's an FOMC day: "Be patient. Don't trade the announcement spike. Wait for the dust to settle."]
+## Bias: [BULLISH / BEARISH / NEUTRAL] | Confidence: [High / Medium / Low]
+[2-3 sentences max: what's driving the market today, what the overnight/gap tells you, and the one price level that invalidates the bias.]
 
 ---
-*This plan is for educational purposes. Trading futures involves substantial risk of loss. Adapt as the market reveals new information.*
+
+## Key Levels (MES)
+[Use 🔴 for resistance, 🟢 for support, ⚡ for the pivot. Mark levels as (likely reached), (possible), or (ceiling/floor) based on the day's context and range.]
+
+🔴 ___ — [Label] ([likely reached / ceiling])
+🔴 ___ — [Label] ([possible])
+🔴 ___ — [Label] ([possible])
+──────────────────────────────
+⚡ ___ — [PDC / key pivot] ← PIVOT. [Above = bullish / Below = bearish]
+──────────────────────────────
+🟢 ___ — [Label] ([possible])
+🟢 ___ — [Label] ([likely reached / floor])
+
+Likely range today: ___ – ___
+
+---
+
+## News Today
+| Time (CET) | Event | Action |
+|------------|-------|--------|
+| ___ | ___ | Trade normally / NO trades ±5 min / All flat before ___ |
+[If FOMC within 7 days:]
+| Apr __ | FOMC (__ days away) | [hawkish/dovish/neutral] tone — [one sentence on what to watch] |
+
+---
+
+## London (09:00–15:30) — Max 2 trades
+- **09:00–09:15**: Do nothing. Mark the opening range high/low.
+- **[Primary scenario]**: [Condition] → [Strategy + entry trigger] | stop ___ | target ___
+- **[Secondary scenario]**: [Condition] → [Strategy + entry trigger] | stop ___ | target ___
+- **Mid-morning**: [One sentence on what to do if market ranges or trends into afternoon]
+
+## NY (15:30–22:00) — Max 2 trades
+- **15:30–16:00**: Wait for ORB to form. Don't chase the open candle.
+- **[Primary scenario]**: [Condition] → [entry trigger] | stop ___ | target ___
+- **[Secondary scenario]**: [Condition] → [entry trigger] | stop ___ | target ___
+- **Midday (16:30–19:00)**: [One sentence — sit out or specific exception]
+- **Afternoon (19:00–21:30)**: [One sentence on what to watch for]
+- **Hard exit**: All flat by 21:30 CET.
+
+---
+
+> [One sharp mindset note relevant to today's conditions — max 2 sentences.]
+
+`$55 max loss | 4 trades max | 1 MES | 4-pt default stop | No overnight`
+
+---
+*Trading futures involves substantial risk of loss. Adapt as the market reveals new information.*
 ```
 
 ### Step 4: Save the Plan
@@ -194,6 +151,9 @@ After generating the plan, write it to `journal/[YYYY-MM-DD]-plan.md` so the tra
 - **Oil/gold driving the market** → run Step 1D, add commodity context to Market Context
 
 ### Output Rules
+- **Be concise** — the entire plan should be scannable in under 60 seconds
 - Be specific with prices — use actual levels from research, not placeholders
 - If you cannot find a specific level, say so explicitly rather than leaving a blank or inventing a number
-- Always include the risk disclaimer
+- Use 🔴/🟢/⚡ level markers and annotate each level as (likely reached), (possible), or (ceiling/floor)
+- Session plans are bullet points only — no subheadings, no paragraphs
+- Always include the risk footer line and disclaimer
